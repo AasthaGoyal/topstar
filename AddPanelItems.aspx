@@ -16,6 +16,7 @@
     <form id="form1" runat="server">
         <div>
               <table >
+			  
                 <tr>
                     <td>   <asp:Label ID="Label0" runat="server" Text="Company Logo:"></asp:Label></td>
                     <td>  <asp:FileUpload ID="fpLogoImage" runat="server" Height="25px" Width="269px" />
