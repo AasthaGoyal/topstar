@@ -33,7 +33,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Company Address:"></asp:Label>
                     </td>
                     <td>
-                    <asp:TextBox ID="txtComAddress" runat="server" Height="22px" Width="206px"></asp:TextBox>
+                    <asp:TextBox ID="txtComAddress" runat="server" Height="22px" Width="206px" AutoCompleteType="HomeStreetAddress"></asp:TextBox>
                     </td></tr>
 
                 

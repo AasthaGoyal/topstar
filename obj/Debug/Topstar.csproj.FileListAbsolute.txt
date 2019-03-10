@@ -51,8 +51,8 @@ E:\Topstar\Topstar\Topstar\bin\roslyn\VBCSCompiler.exe
 E:\Topstar\Topstar\Topstar\bin\roslyn\VBCSCompiler.exe.config
 E:\Topstar\Topstar\Topstar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Topstar\Topstar\Topstar\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csprojAssemblyReference.cache
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csproj.CoreCompileInputs.cache
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csproj.CopyComplete
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.dll
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.pdb
+E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csprojAssemblyReference.cache
