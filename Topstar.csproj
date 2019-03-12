@@ -126,7 +126,8 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="slider.js" />
-    <Content Include="Slideshow.aspx" />
+    <Content Include="SlideshowDemo.aspx" />
+    <Content Include="slideshowStyles.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -206,12 +207,12 @@
     <Compile Include="ShowProperties.aspx.designer.cs">
       <DependentUpon>ShowProperties.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Slideshow.aspx.cs">
-      <DependentUpon>Slideshow.aspx</DependentUpon>
+    <Compile Include="SlideshowDemo.aspx.cs">
+      <DependentUpon>SlideshowDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Slideshow.aspx.designer.cs">
-      <DependentUpon>Slideshow.aspx</DependentUpon>
+    <Compile Include="SlideshowDemo.aspx.designer.cs">
+      <DependentUpon>SlideshowDemo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
