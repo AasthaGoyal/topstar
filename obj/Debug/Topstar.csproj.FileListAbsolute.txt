@@ -56,3 +56,5 @@ E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csproj.CopyComplete
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.dll
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.pdb
 E:\Topstar\Topstar\Topstar\obj\Debug\Topstar.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\NewProject\topstar\obj\Debug\Topstar.dll
+C:\Users\Admin\Desktop\NewProject\topstar\obj\Debug\Topstar.pdb

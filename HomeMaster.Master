@@ -22,7 +22,7 @@
                  <div>
             <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
                 <ItemTemplate>
-                    <asp:Image ID="Image1" runat="server" Height="129px" ImageUrl='<%# Eval("logoimage") %>' Width="139px" />
+                    <asp:Image ID="Image1" runat="server" Height="129px" ImageUrl='<%# DataBinder.Eval(Container.DataItem,"logoimage") %>' Width="139px" />
                     <br />
 <br />
                 </ItemTemplate>
@@ -33,7 +33,7 @@
            <td> <h1> 
                <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource2">
                    <ItemTemplate>
-                       &nbsp;<asp:Label ID="companyNameLabel" runat="server" Text='<%# Eval("companyName") %>' />
+                       &nbsp;<asp:Label ID="companyNameLabel" runat="server" Text='<%# DataBinder.Eval(Container.DataItem,"companyName") %>' />
                        <br />
 <br />
                    </ItemTemplate>
@@ -47,7 +47,7 @@
                <div class="navbar-header">
                <asp:DataList ID="DataList3" runat="server" DataSourceID="SqlDataSource5" RepeatDirection="Horizontal">
                    <ItemTemplate>
-                       <asp:Button ID="Button1" runat="server" Height="26px" Text='<%# Eval("navName") %>' Width="146px" />
+                       <asp:Button ID="Button1" runat="server" Height="26px" Text='<%# DataBinder.Eval(Container.DataItem,"navName") %>' Width="146px" />
 <br />
                        <br />
                    </ItemTemplate>
