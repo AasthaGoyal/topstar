@@ -83,6 +83,8 @@
     <Content Include="images\5.jpg" />
     <Content Include="images\Logo.jpg" />
     <Content Include="layout.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
     <None Include="Resources\bathrom.jpg" />
     <Content Include="Resources\bedroom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -213,6 +215,20 @@
     </Compile>
     <Compile Include="SlideshowDemo.aspx.designer.cs">
       <DependentUpon>SlideshowDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
