@@ -35,11 +35,11 @@ namespace Topstar
         }
 
 
-        public void AddNewNavigation(string name)
+        public void AddNewNavigation(string name, string image)
         {
             openConnection();
 
-            string query = "insert into tbnavigation values('" + name + "')";
+            string query = "insert into tbnavigation values('" + name + "','" + image + "')";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
@@ -48,21 +48,34 @@ namespace Topstar
 
         }
 
-        public void addImages(string imgName, string imgPath)
+        public int returnCityid(string city)
         {
             openConnection();
 
-            string addImages = "insert into tbimages(name, imagePath, propertyid) values('" + imgName + "','" + imgPath + "','" + propertyid + "')";
+            string query = "select cityId from tbcity where city='" + city + "'";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+            int cityid = Convert.ToInt32(cmd.ExecuteScalar());
+
+            return cityid;
+
+        }
+
+        public void addImages(string imgName, string imgPath, string defaultValue)
+        {
+            openConnection();
+
+            string addImages = "insert into tbimages(name, imagePath, propertyid, defaultValue) values('" + imgName + "','" + imgPath + "','" + propertyid + "','" + defaultValue + "')";
             SqlCommand cmd4 = new SqlCommand(addImages, connection);
             cmd4.ExecuteNonQuery();
         }
 
 
-        public int Addrentproperty(int streetNo, string streetname, string suburb, string city, int bedrooms, int bathrooms, int parking, DateTime availability, string type, string description, double weeklyrent, string furnished)
+        public int Addrentproperty(int streetNo, string streetname, string suburb, string city, int bedrooms, int bathrooms, int parking, DateTime availability, string type, string description, double weeklyrent, string furnished, string district)
         {
             openConnection();
 
-            string query = " insert into tbproperty values ('" + streetNo + "','" + streetname + "','" + suburb + "',' " + city + "','" + bathrooms + "','" + bathrooms + "','" + parking + "','" + availability + "','" + type + "','" + description + "')";
+            string query = " insert into tbproperty values ('" + streetNo + "','" + streetname + "','" + suburb + "',' " + city + "','" + bathrooms + "','" + bathrooms + "','" + parking + "','" + availability + "','" + type + "','" + description + "','" + district + "')";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
 
@@ -79,11 +92,11 @@ namespace Topstar
 
         }
 
-        public int Addbuyproperty(int streetNo, string streetname, string suburb, string city, int bedrooms, int bathrooms, int parking, DateTime availability, string type, string description, int price)
+        public int Addbuyproperty(int streetNo, string streetname, string suburb, string city, int bedrooms, int bathrooms, int parking, DateTime availability, string type, string description, int price, string district)
         {
             openConnection();
 
-            string query = " insert into tbproperty values ('" + streetNo + "','" + streetname + "','" + suburb + "',' " + city + "','" + bathrooms + "','" + bathrooms + "','" + parking + "','" + availability + "','" + type + "','" + description + "')";
+            string query = " insert into tbproperty values ('" + streetNo + "','" + streetname + "','" + suburb + "',' " + city + "','" + bathrooms + "','" + bathrooms + "','" + parking + "','" + availability + "','" + type + "','" + description + "','" + district + "')";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.ExecuteNonQuery();
 
@@ -99,9 +112,59 @@ namespace Topstar
 
         }
 
-        //public object searchProperty()
-        //{
+        public void addTradesperson(string lastName, string firstName, int phoneNo, object password, string username,  object emailId, string address, string tradesType, string cname, int cphone, string caddress)
+        {
+            openConnection();
 
-        //}
+            string query = "insert into tbperson values('" + lastName + "','" + firstName + "','" + phoneNo + "','" + password + "','" + username + "','tradesperson','" + emailId + "','" + address + "') select @@identity";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            int personid = Convert.ToInt32(cmd.ExecuteScalar());
+
+            string query3 = "insert into tbtradesperson values ('" + personid + "','" + tradesType + "','" + cname + "','" + cphone + "','" + caddress + "')";
+            SqlCommand cmd3 = new SqlCommand(query3, connection);
+            cmd3.ExecuteNonQuery();
+
+        }
+
+        public void addAgent(string lastName, string firstName, int phoneNo, object password, string username, object emailId, string address,string position, string department, int extNo)
+        {
+            openConnection();
+
+            string query = "insert into tbperson values('" + lastName + "','" + firstName + "','" + phoneNo + "','" + password + "','" + username + "','Agent','" + emailId + "','" + address + "') select @@identity";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            int personid = Convert.ToInt32(cmd.ExecuteScalar());
+
+            
+           
+
+            string query3 = "insert into tbagent(personId, position, department, extentionNo) values ('" + personid + "','" + position + "','" + department + "','" + extNo  + "')";
+            SqlCommand cmd3 = new SqlCommand(query3, connection);
+            cmd3.ExecuteNonQuery();
+
+        }
+
+        public void addAdmin(string lastName, string firstName, int phoneNo, object password, string username, object emailId, string address)
+        {
+            openConnection();
+
+            string query = "insert into tbperson values('" + lastName + "','" + firstName + "','" + phoneNo + "','" + password + "','" + username + "','Admin','" + emailId + "','" + address + "') select @@identity";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            int personid = Convert.ToInt32(cmd.ExecuteScalar());
+
+          
+            string query3 = "insert into tbadmin(personId) values ('" + personid + "')";
+            SqlCommand cmd3 = new SqlCommand(query3, connection);
+            cmd3.ExecuteNonQuery();
+
+        }
+
+        public void addIssue(int propertyid, string name, string image, string description, string dateTime)
+        {
+            openConnection();
+
+            string query = "insert into tbissues(propertyid, issueDate, issueDescription, issueName, issuePhoto) values ('" + propertyid + "','" + dateTime + "','" + description + "','" + name + "','" + image + "')";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.ExecuteNonQuery();
+        }
     }
 }

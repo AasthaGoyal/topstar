@@ -56,11 +56,28 @@ namespace Topstar
         protected void btnAddNav_Click(object sender, EventArgs e)
         {
             string name = txtNavigation.Text;
-            dao.AddNewNavigation(name);
-            lbMessage.Text = "Navigation Added";
+            string pathname;
+         
 
 
+            if(fuIcon.HasFiles)
+            {
+                
+                string filename = fuIcon.FileName;
 
+                fuIcon.PostedFile.SaveAs(Server.MapPath(".") + "/images/" + filename);
+                 pathname = "/images/" + fuIcon.FileName;
+                dao.AddNewNavigation(name, pathname);
+                lbMessage.Text = "Navigation Added";
+
+            }
+            else
+            {
+                lbMessage.Text = "Navigation icon is required";
+            }
+
+           
+          
         }
     }
 }

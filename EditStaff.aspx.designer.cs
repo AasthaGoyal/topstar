@@ -10,42 +10,51 @@
 namespace Topstar {
     
     
-    public partial class DemoImage {
+    public partial class WebForm8 {
         
         /// <summary>
-        /// form1 control.
+        /// dpType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.DropDownList dpType;
         
         /// <summary>
-        /// myfile control.
+        /// gdView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputFile myfile;
+        protected global::System.Web.UI.WebControls.GridView gdView;
         
         /// <summary>
-        /// Button1 control.
+        /// lblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
-        /// Span1 control.
+        /// gdAgent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Span1;
+        protected global::System.Web.UI.WebControls.GridView gdAgent;
+        
+        /// <summary>
+        /// gdAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gdAdmin;
     }
 }

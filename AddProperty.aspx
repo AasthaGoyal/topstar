@@ -1,13 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminLogin.Master" AutoEventWireup="true" CodeBehind="AddProperty.aspx.cs" Inherits="Topstar.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
+     <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+  
+
     <div class="container">
-    <form runat="server">
+  
         
           <label class="modal-title" style="font-size: xx-large; font-weight: bold; font-family: Cambria;"> Add a new property for :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
               <asp:DropDownList ID="dpType" runat="server"  Width="198px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" Font-Size="Large"  Height="39px">
+                  <asp:ListItem Selected="True">Select one</asp:ListItem>
                   <asp:ListItem>Buy</asp:ListItem>
-                  <asp:ListItem Selected="True">Rent</asp:ListItem>
+                  <asp:ListItem>Rent</asp:ListItem>
               </asp:DropDownList>
           
             <br />
@@ -17,11 +30,13 @@
 
         <asp:TextBox runat="server" type="number" class="form-control" id="txtStreetNo" placeholder="Enter Street Number" />
         <br />
-        <asp:TextBox runat="server" type="text" class =" form-control" id="txtStreetName" placeholder =" Enter Street Name" required />
+        <asp:TextBox runat="server" type="text" class =" form-control" id="txtStreetName" placeholder =" Enter Street Name" required =" Street name is required" />
         <br />
-         <asp:TextBox runat="server" type="text" class =" form-control" id="txtSuburb" placeholder =" Enter Suburb" required />
+         <asp:TextBox runat="server" type="text" class =" form-control" id="txtSuburb" placeholder =" Enter Suburb" required="Suburb is required" />
         <br />
-            <asp:TextBox runat="server" type="text" class =" form-control" id="txtCity" placeholder =" Enter city" required />
+              <asp:TextBox runat="server" type="text" class =" form-control" id="txtDistrict" placeholder =" Enter District" required="District is required" />
+            <br />
+            <asp:TextBox runat="server" type="text" class =" form-control" id="txtCity" placeholder =" Enter city" required="City is required" />
             <br />
 
             <asp:TextBox runat="server" type="number" class =" form-control" id="txtNoOfBedrooms" placeholder =" No of Bedrooms"  />
@@ -35,7 +50,16 @@
         
             <br />
            <label class="form-control">Availability</label>
-                       <asp:Calendar ID="availableDate" runat="server"></asp:Calendar>
+                       <asp:Calendar ID="availableDate" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+                           <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
+                           <NextPrevStyle VerticalAlign="Bottom" />
+                           <OtherMonthDayStyle ForeColor="#808080" />
+                           <SelectedDayStyle BackColor="#666666" Font-Bold="True" ForeColor="White" />
+                           <SelectorStyle BackColor="#CCCCCC" />
+                           <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                           <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                           <WeekendDayStyle BackColor="#FFFFCC" />
+            </asp:Calendar>
                 
             <br />
 &nbsp;<asp:DropDownList ID="dpPropertyType" class = "form-control" runat="server">
@@ -84,7 +108,7 @@
            <br />
             
        
-    </form>
+
         </div>
  
 
