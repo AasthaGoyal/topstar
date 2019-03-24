@@ -86,12 +86,17 @@
     <Content Include="images\Logo.jpg" />
     <Content Include="images\save.jpg" />
     <Content Include="layout.html" />
+<<<<<<< HEAD
     <Content Include="EditProperties.aspx" />
     <Content Include="PropertyDetails.aspx" />
     <Content Include="AddStaff.aspx" />
     <Content Include="EditStaff.aspx" />
     <Content Include="AddIssue.aspx" />
     <Content Include="SearchIssues.aspx" />
+=======
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+>>>>>>> 1b13264ead6769d9ec6ee7b37151dcf248d26269
     <None Include="Resources\bathrom.jpg" />
     <Content Include="Resources\bedroom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -223,6 +228,20 @@
     </Compile>
     <Compile Include="SearchIssues.aspx.designer.cs">
       <DependentUpon>SearchIssues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
