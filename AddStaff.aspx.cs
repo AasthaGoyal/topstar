@@ -15,10 +15,20 @@ namespace Topstar
         string hashedPassword;
         string userType;
 
+        string adminid, usertype, firstname;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-           
+            if (HttpContext.Current.Request.Cookies["UserLogin"] != null)
+            {
+                HttpCookie cookie = Request.Cookies["UserLogin"];
+                adminid = cookie["AdminId"];
+                usertype = cookie["UserType"];
+                firstname = cookie["FirstName"];
+                this.Master.profilename = "Welcome " + usertype + " " + firstname;
+                this.Master.loginname = "Logout";
+
+            }
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

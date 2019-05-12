@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminLogin.Master" AutoEventWireup="true" CodeBehind="AddStaff.aspx.cs" Inherits="Topstar.WebForm6" %>
+<%@ MasterType VirtualPath="~/AdminLogin.Master" %> 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -10,6 +12,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
 
+
+    <form runat="server">
     <div class="Container" >
         <label class="modal-title" style="font-size: xx-large; font-weight: bold; font-family: Cambria;">
     Add a new Staff of access&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -73,5 +77,5 @@
         <br />
         <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="#CC0000" ></asp:Label>
     </div>
-    
+    </form>
 </asp:Content>
