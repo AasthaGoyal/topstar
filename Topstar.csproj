@@ -323,6 +323,7 @@
     <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\TopstarNz - Web Deploy.pubxml" />
     <None Include="Resources\bathrom.jpg" />
     <Content Include="Resources\bedroom.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
